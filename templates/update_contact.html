@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="col-md-7 offset-md-2">
+    <form action="/update-contact/{{contact.id}}" method='POST' class='card bg-dark text-light'>
+        <div class="card-body p-4">
+            <div class="mb-3">
+                <label for="fullname">Update your fullname:</label>
+                <input type="text" name="fullname" placeholder="Wirte your fullname" value="{{contact.full_name}}"
+                    class='form-control rounded-8 bg-dark border-0 text-light'>
+            </div>
+            <div class="mb-3">
+                <label for="email">Update your email:</label>
+                <input type="text" name="email" placeholder="Wirte your email" value="{{contact.email}}"
+                    class='form-control rounded-8 bg-dark border-0 text-light'>
+            </div>
+            <div class="mb-3">
+                <label for="phone">Update your phone:</label>
+                <input type="text" name="phone" placeholder="Wirte your phone" value="{{contact.phone}}"
+                    class='form-control rounded-8 bg-dark border-0 text-light'>
+            </div>
+            <button class="btn btn-secondary">Update</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
